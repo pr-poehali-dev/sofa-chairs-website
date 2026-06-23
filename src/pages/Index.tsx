@@ -7,6 +7,8 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
+const LOGO = 'https://cdn.poehali.dev/projects/c5c732d3-d689-4d2d-a7d0-6d405164e41c/bucket/96366dd5-f9e2-4191-b038-87bd767c8713.jpg';
+
 const SOFA = 'https://cdn.poehali.dev/projects/c5c732d3-d689-4d2d-a7d0-6d405164e41c/files/ef24f3c4-137e-4165-8b16-5b1e261367a8.jpg';
 const CHAIR = 'https://cdn.poehali.dev/projects/c5c732d3-d689-4d2d-a7d0-6d405164e41c/files/58850478-0abe-409b-932c-e73dc08de0b6.jpg';
 const TABLE = 'https://cdn.poehali.dev/projects/c5c732d3-d689-4d2d-a7d0-6d405164e41c/files/c08aae80-a234-4bb8-93bf-8ac7bdb1a82c.jpg';
@@ -42,7 +44,9 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="container flex items-center justify-between h-20">
-          <a href="#top" className="font-display text-2xl tracking-[0.3em] font-medium">ВЕРСТА</a>
+          <a href="#top" className="flex items-center">
+            <img src={LOGO} alt="МИРРАКОН" className="h-12 w-auto object-contain" />
+          </a>
           <nav className="hidden md:flex items-center gap-10">
             {nav.map((n) => (
               <a key={n.href} href={n.href} className="text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors">
@@ -60,9 +64,9 @@ const Index = () => {
       <section id="top" className="relative pt-20">
         <div className="container grid lg:grid-cols-2 gap-12 items-center min-h-[90vh] py-16">
           <div className="animate-fade-in">
-            <p className="text-sm tracking-[0.35em] text-accent mb-8 uppercase">Мебельное производство</p>
+            <img src={LOGO} alt="МИРРАКОН" className="h-20 w-auto object-contain mb-6" />
             <h1 className="font-display text-6xl md:text-7xl xl:text-8xl leading-[0.95] font-medium text-balance">
-              Мебель,<br />собранная<br /><span className="italic text-accent">из тишины</span>
+              Мебель,<br />собранная<br /><span className="italic text-accent">для дома</span>
             </h1>
             <p className="mt-8 max-w-md text-lg text-muted-foreground leading-relaxed">
               Диваны, стулья, банкетки и столы на заказ. Чистые линии,
@@ -196,9 +200,7 @@ const Index = () => {
         <div className="container grid lg:grid-cols-2 gap-16">
           <div>
             <p className="text-sm tracking-[0.3em] text-accent uppercase mb-4">Контакты</p>
-            <h2 className="font-display text-5xl md:text-7xl font-medium leading-tight">
-              Обсудим<br />ваш проект
-            </h2>
+            <h2 className="font-display text-5xl md:text-6xl font-medium">Обсудим<br />ваш проект</h2>
             <div className="mt-12 space-y-5">
               <a href="tel:+70000000000" className="flex items-center gap-4 text-xl hover:text-accent transition-colors">
                 <Icon name="Phone" size={20} /> +7 000 000-00-00
@@ -225,8 +227,8 @@ const Index = () => {
 
       <footer className="bg-foreground text-background/50 border-t border-background/10">
         <div className="container py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-          <span className="font-display tracking-[0.3em] text-background/80">ВЕРСТА</span>
-          <span>© {new Date().getFullYear()} Производство мебели на заказ</span>
+          <img src={LOGO} alt="МИРРАКОН" className="h-10 w-auto object-contain brightness-0 invert opacity-70" />
+          <span>© {new Date().getFullYear()} МИРРАКОН — мебель для дома</span>
         </div>
       </footer>
 
